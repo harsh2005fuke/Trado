@@ -1,0 +1,138 @@
+.watchlist {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.watchlist-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.add-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-blue);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.add-btn:hover {
+    background: #2d6bb8;
+    transform: scale(1.05);
+}
+
+.watchlist-search {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.watchlist-search input {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: all var(--transition-base);
+}
+
+.watchlist-search input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(56, 126, 209, 0.1);
+}
+
+.watchlist-search input::placeholder {
+    color: var(--text-muted);
+}
+
+.watchlist-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.watchlist-item {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.watchlist-item:hover {
+    background: var(--darker-bg);
+    border-left: 3px solid var(--primary-blue);
+}
+
+.stock-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stock-symbol {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.stock-change {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.125rem 0.375rem;
+    border-radius: var(--radius-sm);
+}
+
+.stock-change.positive {
+    color: var(--success-green);
+    background: rgba(0, 208, 156, 0.1);
+}
+
+.stock-change.negative {
+    color: var(--danger-red);
+    background: rgba(235, 91, 60, 0.1);
+}
+
+.stock-price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stock-price {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.stock-change-value {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.stock-change-value.positive {
+    color: var(--success-green);
+}
+
+.stock-change-value.negative {
+    color: var(--danger-red);
+}
